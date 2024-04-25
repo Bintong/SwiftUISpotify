@@ -13,6 +13,7 @@ struct SpotifyHomeView: View {
     @State private var selectedCategory: Category? = nil
 
     @State private var products: [Product] = []
+    @State private var productRows: [ProductRow] = []
     var body: some View {
         ZStack {
             Color.spotifyBlack.ignoresSafeArea()
@@ -21,33 +22,23 @@ struct SpotifyHomeView: View {
                     Section {
                         VStack {
                             recentSession
+                                .padding(.horizontal, 16)
                             if let productFirst = products.first {
                                 newReleaseSection(product: productFirst)
+                                    .padding(.horizontal, 16)
                             }
-                            VStack(spacing :8) {
-                                Text("Category title")
-                                    .font(.title)
-                                    .fontWeight(.semibold)
-                                    .foregroundStyle(.spotifyWhite)
-                                    .frame(maxWidth: .infinity,alignment: .leading)
-                                ScrollView(.horizontal) {
-                                    HStack {
-                                        ForEach(0..<20) { _ in
-                                            ImageTitleRowCell()
-                                        }
-                                    }
-                                    
-                                }
-                                .scrollIndicators(.hidden)
-                            }
+                            
+                          listrows
+                            
+                        
                         }
-                        .padding(.horizontal, 16)
+                      
                     } header: {
                         header
                     }
                 })
                 .padding(.top , 8)
-            }
+             }
             .scrollIndicators(.hidden)
             .clipped() // 滑动效果
         }
@@ -99,6 +90,14 @@ struct SpotifyHomeView: View {
         do {
            currentUser =  try await DataBaseHelper().getUsers().first
             products = try await Array(DataBaseHelper().getProducts().prefix(8))
+            var rows: [ProductRow] = []
+            let allBrands = Set(products.map { $0.brand })
+            for brand in allBrands {
+//                let products = self.products.filter({$0.brand == brand})
+                rows.append(ProductRow(title: brand.capitalized, products: products))
+            }
+            productRows = rows
+            
         } catch  {
             
         }
@@ -109,6 +108,9 @@ struct SpotifyHomeView: View {
         NonLazyVGrid(columns: 2, alignment:.center ,spacing:  10 ,items: products) { product in
             if let product {
                 SpotifyRecentsCell(imageName: product.firstImage,title:  product.title)
+                    .asButton(.press) {
+                        
+                    }
             }
         }
     }
@@ -124,6 +126,31 @@ struct SpotifyHomeView: View {
             } onPlayPressed: {
                  
             }
+    }
+    
+    private var listrows : some View {
+        ForEach(productRows) {row in
+            
+            VStack(spacing :8) {
+                Text(row.title)
+                    .font(.title)
+                    .fontWeight(.semibold)
+                    .foregroundStyle(.spotifyWhite)
+                    .frame(maxWidth: .infinity,alignment: .leading)
+                    .padding(.horizontal, 16)
+                ScrollView(.horizontal) {
+                    HStack(alignment:.top, spacing: 16){
+                        ForEach(row.products) { p in
+                            ImageTitleRowCell(imageSize: 120  ,imageName: p.firstImage,title: p.title)
+                        }
+                    }
+                    .padding(.horizontal, 16)
+
+                    
+                }
+                .scrollIndicators(.hidden)
+            }
+        }
     }
 }
 

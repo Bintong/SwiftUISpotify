@@ -45,21 +45,6 @@ struct ProductArray: Codable {
     let total, skip, limit: Int
 }
 
-// MARK: - Product
-struct Product: Codable,Identifiable {
-    let id: Int
-    let title, description: String
-    let price: Int
-    let discountPercentage, rating: Double
-    let stock: Int
-    let brand, category: String
-    let thumbnail: String
-    let images: [String]
-    
-    var firstImage : String {
-        images.first ?? Constants.randomImage
-    }
-}
 
 
 // MARK: - Welcome
@@ -68,19 +53,3 @@ struct UserArray: Codable {
     let total, skip, limit: Int
 }
 
-// MARK: - User
-struct User: Codable,Identifiable {
-    let id: Int
-    let firstName, lastName, maidenName: String
-    let age: Int
-    let email, phone, username, password: String
-    let birthDate: String
-    let image: String
-    let bloodGroup: String
-    let height: Int
-    let weight: Double
-    let domain, ip: String
-    let macAddress, university: String
-    let ein, ssn, userAgent: String
-     
-}
