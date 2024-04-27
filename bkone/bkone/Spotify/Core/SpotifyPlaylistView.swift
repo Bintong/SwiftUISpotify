@@ -27,7 +27,7 @@ struct SpotifyPlaylistView: View {
                 LazyVStack(spacing:12) {
                     PlaylistHeaderCell(title: product.title,
                                        subtitle: product.brand,
-                                       imageName: product.thumbnail)
+                                       imageName: product.thumbnail )
                     
                     .readingFrame { frame in
                         offset = frame.maxY
@@ -114,7 +114,7 @@ struct SpotifyPlaylistView: View {
                 .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
             
                 .onTapGesture {
-                    
+                    router.dismissScreenStack()
                 }
                 .padding(.leading,16)
                 .frame(maxWidth: .infinity,alignment: .leading)

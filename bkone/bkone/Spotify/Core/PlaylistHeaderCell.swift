@@ -12,14 +12,13 @@ struct PlaylistHeaderCell: View {
     
     var title: String = "some title of playlist here"
     var subtitle: String = "subtitle here"
-    var imageName :String = ""
+    var imageName :String =  Constants.randomImage
     var shadowColor: Color = .spotifyBlack.opacity(0.8)
-    
-    var body: some View {
+     var body: some View {
         Rectangle()
             .opacity(0)
             .overlay {
-                ImageLoaderView(urlString: Constants.randomImage)
+                ImageLoaderView(urlString: imageName)
             }
             .overlay(
                 VStack(alignment: .leading, spacing: 8) {

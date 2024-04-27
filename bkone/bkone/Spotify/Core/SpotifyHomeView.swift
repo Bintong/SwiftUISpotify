@@ -154,6 +154,9 @@ struct SpotifyHomeView: View {
                     HStack(alignment:.top, spacing: 16){
                         ForEach(row.products) { p in
                             ImageTitleRowCell(imageSize: 120  ,imageName: p.firstImage,title: p.title)
+                                .onTapGesture {
+                                    gotoPlayListView(product: p)
+                                }
                         }
                     }
                     .padding(.horizontal, 16)
