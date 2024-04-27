@@ -10,16 +10,19 @@ import Foundation
 // MARK: - User
 struct User: Codable,Identifiable {
     let id: Int
-    let firstName, lastName, maidenName: String
+    let firstName, lastName: String
     let age: Int
     let email, phone, username, password: String
-    let birthDate: String
+    
     let image: String
-    let bloodGroup: String
     let height: Int
     let weight: Double
-    let domain, ip: String
-    let macAddress, university: String
-    let ein, ssn, userAgent: String
+    
+    
+    static var mock: User {
+        User(id: 444, firstName: "Nick", lastName: "Sarno" , age: 76, email: "hi@hi.com", phone: "", username: "", password: "", image: Constants.randomImage, height: 180, weight: 200)
+    }
      
+    
+ 
 }

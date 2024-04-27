@@ -7,7 +7,7 @@
 
 import SwiftUI
 
- 
+
 struct PlaylistHeaderCell: View {
     
     var title: String = "some title of playlist here"
