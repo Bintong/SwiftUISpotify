@@ -11,7 +11,6 @@ import SwiftfulRouting
 @main
 struct bkoneApp: App {
     var body: some Scene {
-        
         WindowGroup {
             RouterView { _ in
                 ContentView()
@@ -19,6 +18,7 @@ struct bkoneApp: App {
         }
     }
 }
+
 extension UINavigationController: UIGestureRecognizerDelegate {
     override open func viewDidLoad() {
         super.viewDidLoad()

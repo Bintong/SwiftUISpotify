@@ -14,7 +14,6 @@ struct SpotifyHomeView: View {
     
     @State var viewModel: SpotifyHomeViewModel
     
- 
     var body: some View {
         ZStack {
             Color.spotifyBlack.ignoresSafeArea()
@@ -61,7 +60,6 @@ struct SpotifyHomeView: View {
             }
             .frame(width: 35,height: 35)
             
-            
             ScrollView(.horizontal) {
                 HStack(spacing: 8) {
                     ForEach (Category.allCases , id: \.self) { s in
@@ -70,8 +68,6 @@ struct SpotifyHomeView: View {
                         .onTapGesture {
                             viewModel.selectedCategory = s
                         }
-                           
-                        
                     }
                 }
             }
@@ -79,13 +75,8 @@ struct SpotifyHomeView: View {
         .padding(.vertical,24)
         .padding(.leading,8)
         .background(.spotifyBlack)
-        
     }
-    
-    
-    
-   
-    
+
     private var recentSession:  some View {
         NonLazyVGrid(columns:  2, alignment:.center 
                      ,spacing:  10 ,
@@ -117,7 +108,6 @@ struct SpotifyHomeView: View {
                  
             } onPlayPressed: {
                 gotoPlayListView(product: product )
-
             }
     }
     
@@ -141,8 +131,6 @@ struct SpotifyHomeView: View {
                         }
                     }
                     .padding(.horizontal, 16)
-
-                    
                 }
                 .scrollIndicators(.hidden)
             }
