@@ -143,9 +143,9 @@
 		A65E55C42BD3CCC100B7E205 /* bkone */ = {
 			isa = PBXGroup;
 			children = (
-				A65E55F12BD3CE3100B7E205 /* SHared */,
 				A65E55C52BD3CCC100B7E205 /* bkoneApp.swift */,
 				A65E55C72BD3CCC100B7E205 /* ContentView.swift */,
+				A65E55F12BD3CE3100B7E205 /* Shared */,
 				A6B95F332BD4119800CE7618 /* Spotify */,
 				A65E55C92BD3CCC300B7E205 /* Assets.xcassets */,
 				A65E55CB2BD3CCC300B7E205 /* bkone.entitlements */,
@@ -179,14 +179,15 @@
 			path = bkoneUITests;
 			sourceTree = "<group>";
 		};
-		A65E55F12BD3CE3100B7E205 /* SHared */ = {
+		A65E55F12BD3CE3100B7E205 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
 				A65E55F22BD3CE4400B7E205 /* ImageLoaderView.swift */,
 				A6BF1A822BD3F5A3005B6D32 /* DataBaseHelper.swift */,
 				A6BF1A7E2BD3DAC7005B6D32 /* Constants.swift */,
+				A6B95F3B2BD4177200CE7618 /* Category.swift */,
 			);
-			path = SHared;
+			path = Shared;
 			sourceTree = "<group>";
 		};
 		A6B95F332BD4119800CE7618 /* Spotify */ = {
@@ -228,7 +229,6 @@
 			children = (
 				3AEAB3382BDA014500E75776 /* Product.swift */,
 				3AEAB33A2BDA015600E75776 /* User.swift */,
-				A6B95F3B2BD4177200CE7618 /* Category.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
