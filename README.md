@@ -9,7 +9,7 @@
 Following: [Rebuild Spotify in SwiftUI \(Part 5/5\) | SwiftUI in Practice \#6](https://www.youtube.com/watch?v=c92DfVGGi8M)
 SwiftUI 还有很多功能不完善，但是学习跟上苹果的脚步，每天进步一点，SwfitUI 的声明式UI编写方式，确实相比UIKit 高效，但是因新出，第三方不多，所以还需要时间
  
- [English ReadMe ](/SwiftUISpotify/README-E.md)
+ [English ReadMe ](/README-E.md)
 
 
  #### 配置

@@ -7,7 +7,7 @@ Preview:
 Following:  [Rebuild Spotify in SwiftUI \(Part 5/5\) | SwiftUI in Practice \#6](https://www.youtube.com/watch?v=c92DfVGGi8M)
 SwiftUI still has many imperfect functions, but I can learn to keep up with Apple's footsteps and make progress every day. SwfitUI's declarative UI writing is indeed more efficient than UIKit, but due to the new release, there are not many third parties, so it takes time
 
-[中文 ReadMe ](/SwiftUISpotify/README.md)
+[中文 ReadMe ](/README.md)
 #### Configuration
 Xcode: Version 15.3
 iOS: 17+
