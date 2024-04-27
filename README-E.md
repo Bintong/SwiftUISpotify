@@ -1,51 +1,47 @@
- 
- 
 # **Spotify in SwiftUI** 
- 
-预览： 
+
+Preview:
 
  ![](PreviewFiles/Apr-27-2024%2013-07-31.gif)
 
-Following: [Rebuild Spotify in SwiftUI \(Part 5/5\) | SwiftUI in Practice \#6](https://www.youtube.com/watch?v=c92DfVGGi8M)
-SwiftUI 还有很多功能不完善，但是学习跟上苹果的脚步，每天进步一点，SwfitUI 的声明式UI编写方式，确实相比UIKit 高效，但是因新出，第三方不多，所以还需要时间
- 
- [English ReadMe ](/SwiftUISpotify/README-E.md)
+Following:  [Rebuild Spotify in SwiftUI \(Part 5/5\) | SwiftUI in Practice \#6](https://www.youtube.com/watch?v=c92DfVGGi8M)
+SwiftUI still has many imperfect functions, but I can learn to keep up with Apple's footsteps and make progress every day. SwfitUI's declarative UI writing is indeed more efficient than UIKit, but due to the new release, there are not many third parties, so it takes time
 
+[中文 ReadMe ](/SwiftUISpotify/README.md)
+#### Configuration
+Xcode: Version 15.3
+iOS: 17+
 
- #### 配置
-Xcode： Version 15.3 
-iOS ： 17+ 
-
-### 项目名称和简介
+### Project name and description
 #### UI
 |       |           |
 |---------------------|------------|
-| SpotifyPlaylistView | 详情的List    |
-| PlaylistHeaderCell  | 详情的Header  |
-| SpotifyHomeView     | 首页         |
+| SpotifyPlaylistView | For details, see |
+| PlaylistHeaderCell | Header | for details
+| SpotifyHomeView | Home page |
 
 #### Model
 Product
 User
 
 #### Data
-利用开放API数据
+Leverage open API data
 dummyjson.com [products](https://dummyjson.com/products)
 dummyjson.com  https://dummyjson.com/users
 
 ViewModel
-对于Router 和数据的 集合
+For the Router and the data collection
 
 SpotifyHomeViewModel
 
-#### 第三方库
+#### third-party libraries
 1. SDWebImage
 2. SwiftfulRouting
 3. SwiftfulUI
-4. TabBar(没有使用 为了后期添加)
- 
- 
-#### 视频
+4. TabBar(not used for later addition)
+
+
+#### Video
 Rebuild Spotify in SwiftUI \(Part 5/5\) | SwiftUI in Practice \#6](https://www.youtube.com/watch?v=c92DfVGGi8M)
 
 
